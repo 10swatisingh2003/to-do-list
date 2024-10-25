@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Gochi+Hand");
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: blanchedalmond;
+    min-height: 70vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #494a4b;
+    font-family: "Gochi Hand", cursive;
+    text-align: center;
+    font-size: 130%;
+}
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.container {
+    min-height: 70vh;
+    background-color: #f7f7f7; /* Light paper color */
+    background-image: 
+      linear-gradient(to bottom, #ffffff 96%, transparent 96%), /* For gap between lines */
+      linear-gradient(to bottom, #000000 1px, transparent 1px), /* Darker horizontal lines */
+      linear-gradient(to right, #8b000011 2px, transparent 2px); /* Darker vertical margin line */
+    background-size: 100% 24px, 100% 24px, 50px 100%;
+    background-position: 0 0, 0 0, 0 0;
+    background-attachment: fixed;
+    border-radius: 30px;
+    padding: 50px;
+}
+img{
+    border-radius:10px ;
+    width: 24%;
+}
+h1 {
+    font-size: 30px;
+    transform: rotate(3deg);
+    padding: 0.2rem 1.2rem;
+    margin: 20px;
+    border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+    background-color: rgb(224, 39, 224);
+    
+}
+
+input{
+    outline: none;
+        box-sizing: border-box;
+        background-color: transparent;
+        padding: 0.7rem;
+        border-bottom-right-radius: 15px 3px;
+        border-bottom-left-radius: 3px 15px;
+        border: solid 3px transparent;
+        border-bottom: dashed 3px #000000;
+        font-family: "Gochi Hand", cursive;
+        font-size: 1rem;
+        color: rgba(63, 62, 65, 0.7);
+        width: 70%;
+        margin-bottom: 20px;
+
+}
+#addTask{
+    
+        width: 50px;
+        padding: 0;
+        border: none;
+        transform: rotate(4deg);
+        transform-origin: center;
+        font-family: "Gochi Hand", cursive;
+        text-decoration: none;
+        padding-bottom: 3px;
+        border-radius: 5px;
+        box-shadow: 0 2px 0 #494a4b;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        background-color: rgba(0, 255, 196, 0.7);
+
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    
+    display: flex;
+    justify-content: space-evenly ;
+    text-align: center;
+    width: 100%;
+    padding: 18px;
+    border: 2px solid rgba(255, 255, 255,0.5);
+    font-size: 20px;
+    border: none;
+}
+
+.deleteTask {
+    position: relative;
+    cursor: default;
+    background: transparent;
+    border: none;
+    font-size: x-large; 
+}
+
+.deleteTask::before {
+    content: "🗑️"; /* Eraser emoji */
+    margin-right: 5px; /* Space between emoji and text */
+    font-size: 16px; /* Size of the emoji */
+    vertical-align: middle; /* Align with text */
+}
+
+  .editTask {
+    position: relative;
+    cursor: default; 
+    background: transparent;
+    border: none;/* Sets the default cursor but we add a pencil symbol */
+}
+
+.editTask::before {
+    content: "✏️"; /* Pencil emoji */
+    position: absolute;
+    left: -20px;
+    top: -5px;
+    font-size:x-large;
+    pointer-events: none; /* Ensures it doesn't interfere with button clicks */
+}
+
+  .editTask:hover {
+    transform: scale(1.05);
+  }
+
